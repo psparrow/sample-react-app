@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ProfilePhoto from './ProfilePhoto.js'
-import WelcomeMessage from './WelcomeMessage.js'
-import AppointmentTable from './AppointmentTable.js'
+import ProfilePhoto from './ProfilePhoto.jsx'
+import WelcomeMessage from './WelcomeMessage.jsx'
+import AppointmentTable from './AppointmentTable.jsx'
 
 class App extends Component {
 

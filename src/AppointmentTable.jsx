@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppointmentRow from './AppointmentRow.js'
+import AppointmentRow from './AppointmentRow.jsx'
 
 // This class renders the entire appointment table
 class AppointmentTable extends Component {
