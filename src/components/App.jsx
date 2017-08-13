@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AddAppointment from '../containers/AddAppointment.jsx'
 import AppointmentTable from '../containers/AppointmentTable.jsx'
 import ProfilePhoto from '../containers/ProfilePhoto.jsx'
 import WelcomeMessage from '../containers/WelcomeMessage.jsx'
@@ -17,6 +18,7 @@ class App extends Component {
 		<div className="col-sm-9">
 		  <WelcomeMessage />
 		  <AppointmentTable />
+		  <AddAppointment />
 		</div>
 	      </div>
 	    </div>

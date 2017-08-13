@@ -21,19 +21,13 @@ const dataService = store => next => action => {
 	var apptData = [
 	    {
 		"id" : 695,
-		"patient_id" : 16,
-		"physician_id" : 14,
 		"start" : "2015-04-24T07:00:00-06:00",
-		"end" : "2015-04-24T07:30:00-06:00",
 		"patient_name" :"Mike Ross",
 		"physician_name" : "Gregory House"
 	    },
 	    {
 		"id" : 696,
-		"patient_id" : 17,
-		"physician_id" : 12,
 		"start" : "2015-04-22T08:00:00-06:00",
-		"end" : "2015-04-22T07:45:00-06:00",
 		"patient_name" :"Ted Nugent",
 		"physician_name" : "Oz"
 	    }
@@ -42,6 +36,26 @@ const dataService = store => next => action => {
 	next({
 	    type: 'GET_APPOINTMENT_DATA_RECEIVED',
 	    data: apptData
+	})
+
+	break
+    case 'ADD_APPOINTMENT':
+	// In a real-world application, the API call to persist the new
+	// appointment data would go here.
+
+	// Build the new appointment JSON to add to the appointment list.
+	// This would likely be returned from the API call, confiring the
+	// action was a success.
+	var appt = {
+	    "id" : Math.random() * 1000,
+	    "start" : action.data.datetime,
+	    "patient_name" : action.data.patient,
+	    "physician_name" : action.data.doctor
+	}
+
+	next({
+	    type: 'CREATE_APPOINTMENT_SUCCESS',
+	    data: appt
 	})
 
 	break
